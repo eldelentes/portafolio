@@ -27,3 +27,34 @@ $(window).scroll(function(e){
 		$('.scroll').fadeIn();
 	}
 });
+
+document.onmousemove = function(e){
+    mX = e.pageX * 0.02;
+    mY = e.pageY * 0.02;
+
+	var img_src = 'assets/intro.png';
+	var canvas = document.getElementById('canvas');
+	var ctx = canvas.getContext('2d');
+	var imageData;
+
+	var img = new Image();
+	img.crossOrigin = 'Anonymous';
+	img.src = img_src;
+	img.onload = function() {
+		ctx.drawImage(img, 0, 0, 800, 800);
+		
+		for(var i = 0; i < 50; i++) {
+			createDisplacement();
+		}
+	}
+
+	function createDisplacement() {
+		var xVal = Math.round(Math.random() * mY - 4);
+		var yVal = Math.round(Math.random() * canvas.height);
+		var height = Math.round(Math.random() * mX + 1);
+		
+		var data = ctx.getImageData(0, yVal, canvas.width, height);
+		ctx.clearRect(0, yVal, canvas.width, height);
+		ctx.putImageData(data, xVal, yVal);
+	}
+}

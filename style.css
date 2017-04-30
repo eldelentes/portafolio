@@ -45,6 +45,7 @@ body {
 	font-size: 2em;
 	flex-direction: column;
 	text-align: center;
+	overflow: hidden;
 }
 
 .slide p + p {
@@ -64,6 +65,15 @@ p.light a {
 .intro { background: #000; }
 .skills { background: #FFE900; }
 .contact { background: #2B4BFF; }
+
+.intro h2 {
+	position: relative;
+	z-index: 2;
+}
+
+.about p {
+	background: #fff;
+}
 
 .scroll {
 	position: absolute;
@@ -100,8 +110,8 @@ p.light a {
 }
 
 .shots--shot {
-	width: 25vw;
-	height: 33vh;
+	width: 25%;
+	height: 33.333vh;
 }
 
 .shots--shot a {
@@ -114,6 +124,10 @@ p.light a {
 
 .shots--shot img {
 	width: 100%;
+}
+
+.canvasBG {
+	position: absolute;
 }
 
 @media (max-width: 600px) {
