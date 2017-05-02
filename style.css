@@ -87,6 +87,9 @@ p.light a {
 .scroll {
 	position: absolute;
 	bottom: 2vh;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	        transform: translateX(-50%);
 }
 
 .scroll #arrow {
@@ -168,8 +171,8 @@ p.light a {
 }
 
 @media (max-width: 600px) {
-	body {
-		font-size: 12px;
+	p {
+		font-size: 22px;
 	}
 
 	.shots--shot {
