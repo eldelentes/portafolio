@@ -152,6 +152,17 @@ p.light a {
 .shots--shot {
 	width: 25%;
 	height: 33.333vh;
+	-webkit-transition: all 0.1s ease-in;
+	transition: all 0.1s ease-in;
+	will-change: transform;
+}
+
+.shots--shot:hover {
+	cursor: pointer;
+	z-index: 1;
+	box-shadow: 0 5em 10em rgba(0,0,0,0.5);
+	-webkit-transform: scale(1.1);
+	        transform: scale(1.1);
 }
 
 .shots--shot a {
