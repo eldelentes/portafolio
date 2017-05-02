@@ -1,7 +1,7 @@
 @font-face {
-  font-family:'Moderat', sans-serif;
-  src: url(assets/font.otf);
-  font-weight: 600;
+    font-family: 'Moderat';
+    src: url('assets/font.otf');
+    font-weight: 600;
 }
 
 * {
@@ -170,5 +170,9 @@ p.light a {
 @media (max-width: 600px) {
 	.shots--shot {
 		width: 100%;
+	}
+
+	.slide {
+		padding: 2em;
 	}
 }
