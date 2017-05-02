@@ -168,6 +168,10 @@ p.light a {
 }
 
 @media (max-width: 600px) {
+	body {
+		font-size: 12px;
+	}
+
 	.shots--shot {
 		width: 100%;
 	}
