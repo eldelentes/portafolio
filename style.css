@@ -38,12 +38,21 @@ body {
 .slide {
 	height: 800px;
 	height: 100vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	position: relative;
 	font-size: 2em;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	text-align: center;
 	overflow: hidden;
 }
@@ -58,7 +67,7 @@ p.light a {
 }
 
 .secondaryType {
-	font-family: 'Moderat', sans-serif;
+	font-family:'Moderat', sans-serif;
 	font-weight: 600;
 }
 
@@ -82,31 +91,59 @@ p.light a {
 
 .scroll #arrow {
 	position: relative;
-	animation: scroll 1s ease infinite;
+	-webkit-animation: scroll 1s ease infinite;
+	        animation: scroll 1s ease infinite;
 	opacity: 0;
-	transform: translateY(-10%);
+	-webkit-transform: translateY(-10%);
+	        transform: translateY(-10%);
 }
 
-@keyframes scroll {
+@-webkit-keyframes scroll {
 	0% {
-		transform: translateY(-10%);
+		-webkit-transform: translateY(-10%);
+		        transform: translateY(-10%);
 		opacity: 1;
 	}
 
 	50% {
-		transform: translateY(100%);
+		-webkit-transform: translateY(100%);
+		        transform: translateY(100%);
 		opacity: 0;
 	}
 
 	100% {
 		opacity: 1;
-		transform: translateY(-10%);
+		-webkit-transform: translateY(-10%);
+		        transform: translateY(-10%);
+	}
+}
+
+@keyframes scroll {
+	0% {
+		-webkit-transform: translateY(-10%);
+		        transform: translateY(-10%);
+		opacity: 1;
+	}
+
+	50% {
+		-webkit-transform: translateY(100%);
+		        transform: translateY(100%);
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(-10%);
+		        transform: translateY(-10%);
 	}
 }
 
 .work {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 
 .shots--shot {
