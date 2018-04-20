@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+		<meta charset="utf-8">
+		<title>eldelentes / Product Designer</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="I’m Eduardo, your personal Graphic Thinker, Front End Developer & friend "/>
+		<link rel="icon" href="favicon.png">
+	</head>
+  <body>
+    <section class="showcase">
+      <div class="showcase__title">
+        <h2>Showcase &#x1F440; ⬎</h2>
+      </div>
+      <div class="showcase__grid">
+
+      </div>
+    </section>
+  </body>
+  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript">
+    var folder = "assets/showcase/";
+    $.ajax({
+      url : folder,
+      success: function (data) {
+          $(data).find("a").attr("href", function (i, val) {
+              if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+                $(".showcase__grid").append( "<article><img src='"+ folder + val +"'></article>" );
+              } 
+          });
+      }
+    });
+  </script>
+</html>

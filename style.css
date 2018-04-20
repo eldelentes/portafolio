@@ -181,6 +181,41 @@ p.light a {
 	position: absolute;
 }
 
+.showcase {
+	background: #ededed;
+	padding: 4rem 0;
+}
+
+.showcase__title {
+	text-align: center;
+}
+
+.showcase__title h2 {
+	font-size: 1em;
+	font-family:'Moderat', sans-serif;
+	padding: 1em;
+}
+
+.showcase__grid {
+	width: 80%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+	grid-auto-rows: minmax(50px, auto);
+	grid-gap: 20px;
+}
+
+.showcase__grid article {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.showcase__grid img {
+	max-width: 100%;
+	object-fit: contain;
+}
+
 @media (max-width: 600px) {
 	p {
 		font-size: 22px;
