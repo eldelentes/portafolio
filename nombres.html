@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nombres</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css">
+    <link href="https://fonts.googleapis.com/css?family=Stoke" rel="stylesheet">
+
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+
+      :root {
+        --bg-color: #373250;
+        --bg-color-alternative: #EAEAEA;
+        --font-color:#BD802D;
+      }
+
+      body {
+        font-family: 'Stoke', serif;
+      }
+
+      .section {
+        text-align: center;
+      }
+
+      .section:nth-child(odd) { background: #373250; }
+      .section:nth-child(even) { background: #EAEAEA; }
+      
+      .name {
+        font-size: 4rem;
+        font-weight: 500;
+        color: #BD802D;
+        margin-bottom: 1rem;
+      }
+
+      .desc {
+        font-size: 1rem;
+        opacity: 0.5;
+        color: #BD802D;
+      }
+
+      .url {
+        font-size: 1rem;
+        opacity: 0.5;
+        color: #BD802D;
+        text-decoration: underline;
+      }
+
+      footer {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="slides" id="fullpage"></div>
+    <script>
+      $.getJSON( "names.json", function(data){
+        names = data;
+        
+        $.each( names, function( i, val ) {
+          $('.slides').append('\
+            <section class="section">\
+              <h2 class="name">' + names[i].name + '</h2>\
+              <footer>\
+                <h3 class="desc">' + names[i].description + '</h3>\
+                <h4 class="url">' + names[i].url + '</h4>\
+              </footer>\
+            </section>\
+          ');
+        });
+      })
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $('#fullpage').fullpage();
+      });
+    </script>
+  </body>
+</html>
