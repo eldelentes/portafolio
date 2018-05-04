@@ -61,6 +61,7 @@
   </head>
   <body>
     <div class="slides" id="fullpage"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>    
     <script>
       $.getJSON( "names.json", function(data){
         names = data;
@@ -78,9 +79,6 @@
         });
       })
     </script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
-
     <script>
       $(document).ready(function() {
         $('#fullpage').fullpage();
