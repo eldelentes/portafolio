@@ -20,6 +20,11 @@
 
       .section {
         text-align: center;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
       }
 
       .section:nth-child(odd) { background: #373250; }
@@ -73,9 +78,9 @@
         });
       });
       
-       $(document).ready(function() {
-        $('#fullpage').fullpage();
-      });
+      // $(document).ready(function() {
+        //$('#fullpage').fullpage();
+      //});
     </script>
   </body>
 </html>
