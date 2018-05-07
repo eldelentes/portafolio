@@ -5,19 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nombres</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css">
     <link href="https://fonts.googleapis.com/css?family=Stoke" rel="stylesheet">
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>    
 
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
-
-      :root {
-        --bg-color: #373250;
-        --bg-color-alternative: #EAEAEA;
-        --font-color:#BD802D;
-      }
 
       body {
         font-family: 'Stoke', serif;
@@ -61,7 +56,6 @@
   </head>
   <body>
     <div class="slides" id="fullpage"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>    
     <script>
       $.getJSON( "names.json", function(data){
         names = data;
