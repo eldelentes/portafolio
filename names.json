@@ -5,103 +5,53 @@
     "url": "tule.mx"
   },
   "2" : {
-    "name" : "Motule Capital",
-    "description" : "Derivado de Arból de Tule",
-    "url": "motule.mx"
+    "name" : "Berilo Capital",
+    "description" : "Elemento de tabla periodica",
+    "url": "berilio.mx"
   },
   "3" : {
-    "name" : "Fresno Capital",
-    "description" : "Arból/Planta de Fresno",
-    "url": "fresnocapital.mx"
-  },
-  "3" : {
-    "name" : "Roble Santo Capital",
-    "description" : "Arból de Roble ",
-    "url": "roblesanto.mx"
+    "name" : "Cadmio Capital",
+    "description" : "Elemento de tabla periodica",
+    "url": "cadmiocapital.com"
   },
   "4" : {
-    "name" : "Monte Grande Desarrollos",
-    "description" : "Estructura Geográfica",
-    "url": "roblesanto.com"
+    "name" : "Halita Capital",
+    "description" : "Mineral sedimentario",
+    "url": "halita.mx"
   },
   "5" : {
-    "name" : "Sierra Santa Capital",
-    "description" : "Estructura Geográfica",
-    "url": "sierrasanta.mx "
+    "name" : "Platus Capital",
+    "description" : "Latin de plata",
+    "url": "platus.mx"
   },
   "6" : {
-    "name" : "Otero Capital",
-    "description" : "Cerro aislado que domina un llano:",
-    "url": "oterocapital.com"
+    "name" : "Berrocal Capital",
+    "description" : "Tipo de paisaje granítico",
+    "url": "berrocal.mx"
   },
   "7" : {
-    "name" : "Tantique Capital",
-    "description" : " 'Monumental' en Latín ",
-    "url": "tantique.mx"
+    "name" : "Basalto Capital",
+    "description" : "Roca ígnea volcánica ",
+    "url": "basalto.mx"
   },
   "8" : {
-    "name" : "Vía Monte Desarrollos",
-    "description" : "Derivado de 'Camino al monte'",
-    "url": "viamonte.mx"
+    "name" : "Barita Capital",
+    "description" : "Mineral sedimentario",
+    "url": "barita.mx"
   },
   "9" : {
-    "name" : "Acal Capital",
-    "description" : "'Acal': Del náhuatl acalli y este del nahuatl atl(agua) y de calli(casa).",
-    "url": "acal.mx "
+    "name" : "Ocres Capital",
+    "description" : "Mineral terroso ",
+    "url": "ocres.mx"
   },
   "10" : {
-    "name" : "Achiote Capital",
-    "description" : "'Achiote': Planta Medicinal Típica de méxico.",
-    "url": "achiote.mx "
+    "name" : "Tabula Capital",
+    "description" : "Tabla (Piedra) sin ecribir.",
+    "url": "tabula.mx"
   },
   "11" : {
-    "name" : "Bixia",
-    "description" : "'Achiote': Deriva del nombre cientifico de Achiote.",
-    "url": "bixia.mx "
-  },
-  "12" : {
-    "name" : "Copal Capital",
-    "description" : "Planta Medicinal",
-    "url": "copal-capital.com"
-  },
-  "13" : {
-    "name" : "Gran Milpa Capital",
-    "description" : "Derivado de 'Milpa' sistema de cultivo",
-    "url": "granmilpa.com"
-  },
-  "14" : {
-    "name" : "Milli Capital",
-    "description" : "Derivado de 'Milpa' sistema de cultivo",
-    "url": "milli.mx"
-  },
-  "15" : {
-    "name" : "Paico",
-    "description" : "Derivado de 'Epazote' en maya",
-    "url": "paico.mx"
-  },
-  "16" : {
-    "name" : "Ajiji Capital",
-    "description" : " Deriva de Aji qué significa chile.",
-    "url": "ajiji.mx"
-  },
-  "17" : {
-    "name" : "Abeto Capital",
-    "description" : "Tipo de pino",
-    "url": "abetocapital.mx"
-  },
-  "18" : {
-    "name" : "Olivos Capital",
-    "description" : "Árbol de Olivo",
-    "url": "olivos.mx"
-  },
-  "19" : {
-    "name" : "Dos Olivos Capital",
-    "description" : "Arbol de Olivo",
-    "url": "dosolivos.mx"
-  },
-  "20" : {
-    "name" : "Gordolobo Desarrollos",
-    "description" : "Hierba de Gordolobo",
-    "url": "gordolobo.mx"
-  }
+    "name" : "Bentos Capital",
+    "description" : "Comunidad formada por los organismos marinos",
+    "url": "bentos.mx"
+  }  
 }
