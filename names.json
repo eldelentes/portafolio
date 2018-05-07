@@ -53,5 +53,10 @@
     "name" : "Bentos Capital",
     "description" : "Comunidad formada por los organismos marinos",
     "url": "bentos.mx"
-  }  
+  },
+  "11" : {
+    "name" : "Cometa Capital",
+    "description" : "Cuerpos celestes",
+    "url": "cometacapital.mx"
+  } 
 }
