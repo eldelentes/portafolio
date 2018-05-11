@@ -1,62 +1,72 @@
 {
   "1" : {
-    "name" : "Tule Capital",
-    "description" : "Arból de Tule",
-    "url": "tule.mx"
+    "name" : "Ison Capital",
+    "description" : "Nombre de Cometa",
+    "url": "ison.mx"
   },
   "2" : {
-    "name" : "Berilo Capital",
-    "description" : "Elemento de tabla periodica",
-    "url": "berilio.mx"
+    "name" : "Astro Capital",
+    "description" : "Cuerpo celeste",
+    "url": "astro-capital.com"
   },
   "3" : {
-    "name" : "Cadmio Capital",
-    "description" : "Elemento de tabla periodica",
-    "url": "cadmiocapital.com"
+    "name" : "Parálelo Capital",
+    "description" : "Línea imaginaria en plano terrestre",
+    "url": "paralelo.capital"
   },
   "4" : {
-    "name" : "Halita Capital",
-    "description" : "Mineral sedimentario",
-    "url": "halita.mx"
+    "name" : "Nebulo Capital",
+    "description" : "Juego de palabra Nebula",
+    "url": "nebulo.mx"
   },
   "5" : {
-    "name" : "Platus Capital",
-    "description" : "Latin de plata",
-    "url": "platus.mx"
+    "name" : "Eclipse Desarrollos",
+    "description" : "Ocultación transitoria de un astro",
+    "url": "eclipsedesarrollos.mx"
   },
   "6" : {
-    "name" : "Berrocal Capital",
-    "description" : "Tipo de paisaje granítico",
-    "url": "berrocal.mx"
+    "name" : "Nadir Capital",
+    "description" : "Término de astronomía",
+    "url": "nadir.capital"
   },
   "7" : {
-    "name" : "Basalto Capital",
-    "description" : "Roca ígnea volcánica ",
-    "url": "basalto.mx"
+    "name" : "Gran Nova Capital",
+    "description" : "Estrella cuyo brillo experimenta bruscas variaciones",
+    "url": "grannova.com"
   },
   "8" : {
-    "name" : "Barita Capital",
-    "description" : "Mineral sedimentario",
-    "url": "barita.mx"
+    "name" : "Penumbra Capital",
+    "description" : "El punto medio entre la sombra y la luz",
+    "url": "penumbra.mx"
   },
   "9" : {
-    "name" : "Ocres Capital",
-    "description" : "Mineral terroso ",
-    "url": "ocres.mx"
+    "name" : "Olivino Capital",
+    "description" : "Roca ígnea",
+    "url": "olivino.mx"
   },
   "10" : {
-    "name" : "Tabula Capital",
-    "description" : "Tabla (Piedra) sin ecribir.",
-    "url": "tabula.mx"
+    "name" : "Abasalto Capital",
+    "description" : "Deriva de 'Basalto' ",
+    "url": "abasalto.mx"
   },
   "11" : {
-    "name" : "Bentos Capital",
-    "description" : "Comunidad formada por los organismos marinos",
-    "url": "bentos.mx"
+    "name" : "Basalte Capital",
+    "description" : "Deriva de 'Basalto' ",
+    "url": "basalte.capital"
   },
   "12" : {
-    "name" : "Cometa Capital",
-    "description" : "Cuerpos celestes",
-    "url": "cometacapital.mx"
-  } 
+    "name" : "Obalam Capital",
+    "description" : "Deriva de 'Balam' ",
+    "url": "obalam.com"
+  },
+  "13" : {
+    "name" : "Basalva Capital",
+    "description" : "Deriva de 'Basalto' ",
+    "url": "basalva.com"
+  },
+  "14" : {
+    "name" : "Basal Capital",
+    "description" : "Deriva de 'Basalto' ",
+    "url": "basal.capital"
+  }
 }
