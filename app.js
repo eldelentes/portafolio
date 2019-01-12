@@ -75,7 +75,7 @@ function lerp(a, b, n) {
 init();
 
 var actorsOptions = {
-	strings: ["Non Profits", "Startups", "Businesses"],
+	strings: ["Non-profits", "Startups", "Businesses"],
 	typeSpeed: 50,
 	backSpeed: 80,
 	startDelay: 100,
