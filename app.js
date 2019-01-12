@@ -1,60 +1,102 @@
-$.jribbble.setToken('7804718bfcc9998c45e107f5cd36abbd4e6cff197ecdc652f98d8270ad52d5bb');
+const canvas = document.querySelector(".canvas");
+const ctx = canvas.getContext("2d");
 
-$.jribbble.users('eldelentes').shots({per_page: 12}).then(function(shots) {
-  var html = [];
-  
-  shots.forEach(function(shot) {
-    html.push('<article class="shots--shot">');
-    html.push('<a href="' + shot.html_url + '" target="_blank" style="background-image:url('+ shot.images.normal +');">');
-    html.push('</a></article>');
-  });
-  
-  $('.work').html(html.join(''));
-});
+let width = (canvas.width = window.innerWidth);
+let height = (canvas.height = window.innerHeight);
 
-$(document).ready(function(){
-   $('.header').midnight();
-});
+let mouseX = width / 2;
+let mouseY = height / 2;
 
-$(window).scroll(function(e){
-	var windowPosition = $(this).scrollTop();
-	var rotation =  windowPosition * 0.15;
-	$('.logo').css('transform', 'rotate(' + rotation + 'deg)');
-	
-	if (windowPosition > 100) {
-		$('.scroll').fadeOut();
-	} else {
-		$('.scroll').fadeIn();
-	}
-});
+let circle = {
+  radius: 30,
+  lastX: mouseX,
+  lastY: mouseY
+};
 
-document.onmousemove = function(e){
-    mX = e.pageX * 0.02;
-    mY = e.pageY * 0.02;
+const elems = [...document.querySelectorAll("[data-hover]")];
 
-	var img_src = 'assets/intro.png';
-	var canvas = document.getElementById('canvas');
-	var ctx = canvas.getContext('2d');
-	var imageData;
-
-	var img = new Image();
-	img.crossOrigin = 'Anonymous';
-	img.src = img_src;
-	img.onload = function() {
-		ctx.drawImage(img, 0, 0, 800, 800);
-		
-		for(var i = 0; i < 50; i++) {
-			createDisplacement();
-		}
-	}
-
-	function createDisplacement() {
-		var xVal = Math.round(Math.random() * mY - 4);
-		var yVal = Math.round(Math.random() * canvas.height);
-		var height = Math.round(Math.random() * mX + 1);
-		
-		var data = ctx.getImageData(0, yVal, canvas.width, height);
-		ctx.clearRect(0, yVal, canvas.width, height);
-		ctx.putImageData(data, xVal, yVal);
-	}
+function onResize() {
+  width = canvas.width = window.innerWidth;
+  height = canvas.height = window.innerHeight;
 }
+
+function render() {
+  circle.lastX = lerp(circle.lastX, mouseX, 0.25);
+  circle.lastY = lerp(circle.lastY, mouseY, 0.25);
+
+  ctx.clearRect(0, 0, width, height);
+  ctx.beginPath();
+  ctx.arc(circle.lastX, circle.lastY, circle.radius, 0, Math.PI * 2, false);
+  ctx.fillStyle = "#fff";
+  ctx.fill();
+  ctx.closePath();
+
+  requestAnimationFrame(render);
+}
+
+function init() {
+  requestAnimationFrame(render);
+
+  window.addEventListener("mousemove", function(e) {
+    mouseX = e.pageX;
+    mouseY = e.pageY;
+  });
+
+  window.addEventListener("resize", onResize, false);
+
+  let tween = TweenMax.to(circle, 0.25, {
+    radius: circle.radius * 3,
+    ease: Power1.easeInOut,
+    paused: true
+  });
+
+  elems.forEach(el => {
+    el.addEventListener(
+      "mouseenter",
+      () => {
+        tween.play();
+      },
+      false
+    );
+    el.addEventListener(
+      "mouseleave",
+      () => {
+        tween.reverse();
+      },
+      false
+    );
+  });
+}
+
+function lerp(a, b, n) {
+  return (1 - n) * a + n * b;
+}
+
+init();
+
+var actorsOptions = {
+	strings: ["Non Profits", "Startups", "Businesses"],
+	typeSpeed: 50,
+	backSpeed: 80,
+	startDelay: 100,
+	backDelay: 200,
+	loop: true,
+	showCursor: false,
+	shuffle: true,
+	loopCount: Infinity
+}
+
+var outcomeOptions = {
+	strings: ["metrics", "conversion", "branding", "communication"],
+	typeSpeed: 50,
+	backSpeed: 80,
+	startDelay: 100,
+	backDelay: 200,
+	loop: true,
+	showCursor: false,
+	shuffle: true,
+	loopCount: Infinity
+}
+
+var typed = new Typed(".actors", actorsOptions);
+var typed = new Typed(".outcomes", outcomeOptions);

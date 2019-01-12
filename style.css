@@ -1,231 +1,163 @@
-@font-face {
-    font-family: 'Moderat';
-    src: url('assets/font.otf');
-    font-weight: 600;
-}
-
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+  
 
 body {
-	font-family: 'Asar', serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    background:#D0D0C6;
+    color: #3D220F;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
 }
 
-.header {
-	position: fixed;
-	width: 100%;
-	text-align: center;
-	z-index: 1;
+a {
+    color: #3D220F;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+.canvas {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.page {
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    width: 75%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 1440px;
 }
 
 .logo {
-	width: 106px;
-    height: 106px;
-    display: inline-block;
-    background-image: url(assets/logo.png);
-    margin-top: 1em;
+    font-family: 'Sharp Grotesk', sans-serif;
+    text-align: center;
 }
 
-.midnightHeader.black .logo {
-	background-position: 0 106px;
+.tagline {
+    font-size: 3em;
+    font-family: 'Mars Extended', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
 }
 
-.slide {
-	height: 800px;
-	height: 100vh;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-	position: relative;
-	font-size: 2em;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
-	text-align: center;
-	overflow: hidden;
+.tagline .word {
+    background: yellow;
 }
 
-.slide p + p {
-	margin-top: 1em;
+ul {
+    list-style: none;
 }
 
-.light,
-p.light a {
-	color: #fff;
+h4 {
+    font-family: 'Sharp Grotesk', sans-serif;
+    font-size: 0.8em;
+    padding-bottom: 1em;
 }
 
-.secondaryType {
-	font-family:'Moderat', sans-serif;
-	font-weight: 600;
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 2em;
 }
 
-.intro { background: #000; }
-.skills { background: #FFE900; }
-.contact { background: #2B4BFF; }
-
-.intro h2 {
-	position: relative;
-	z-index: 2;
+.social {
+    display: flex;
+    justify-content: space-between;
 }
 
-.about p {
-	background: #fff;
+li > ul li + li,
+li > div li + li {
+    padding-top: 0.5em;
 }
 
-.scroll {
-	position: absolute;
-	bottom: 2vh;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-	        transform: translateX(-50%);
+::selection {
+    background: yellow;
+} 
+
+@media only screen and (max-width: 1024px) {
+    .container,
+    .tagline {
+        width: 90%;
+    }
 }
 
-.scroll #arrow {
-	position: relative;
-	-webkit-animation: scroll 1s ease infinite;
-	        animation: scroll 1s ease infinite;
-	opacity: 0;
-	-webkit-transform: translateY(-10%);
-	        transform: translateY(-10%);
+@media only screen and (max-width: 600px) {
+    .content {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .container,
+    .tagline {
+        width: 90%;
+    }
+
+    .social {
+        align-items: flex-end;
+    }
 }
 
-@-webkit-keyframes scroll {
-	0% {
-		-webkit-transform: translateY(-10%);
-		        transform: translateY(-10%);
-		opacity: 1;
-	}
 
-	50% {
-		-webkit-transform: translateY(100%);
-		        transform: translateY(100%);
-		opacity: 0;
-	}
+@keyframes rotateWord {
+    0% {
+      opacity: 0;
+    }
+    2% {
+      opacity: 0;
+      -webkit-transform: translateY(-25px);
+              transform: translateY(-25px);
+    }
+    5% {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
+    13% {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
+    16% {
+      opacity: 0;
+      -webkit-transform: translateY(25px);
+              transform: translateY(25px);
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+  
 
-	100% {
-		opacity: 1;
-		-webkit-transform: translateY(-10%);
-		        transform: translateY(-10%);
-	}
+@font-face {
+    font-family: 'Sharp Grotesk';
+    src: url(2.otf);
+    font-weight:400;
 }
 
-@keyframes scroll {
-	0% {
-		-webkit-transform: translateY(-10%);
-		        transform: translateY(-10%);
-		opacity: 1;
-	}
-
-	50% {
-		-webkit-transform: translateY(100%);
-		        transform: translateY(100%);
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 1;
-		-webkit-transform: translateY(-10%);
-		        transform: translateY(-10%);
-	}
-}
-
-.work {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
-}
-
-.shots--shot {
-	width: 25%;
-	height: 33.333vh;
-	-webkit-transition: all 0.1s ease-in;
-	transition: all 0.1s ease-in;
-	will-change: transform;
-}
-
-.shots--shot:hover {
-	cursor: pointer;
-	z-index: 1;
-	box-shadow: 0 5em 10em rgba(0,0,0,0.5);
-	-webkit-transform: scale(1.1);
-	        transform: scale(1.1);
-}
-
-.shots--shot a {
-	display: inline-block;
-	width: 100%;
-	height: 100%;
-	background-size: cover;
-	background-position: center center;
-}
-
-.shots--shot img {
-	width: 100%;
-}
-
-.canvasBG {
-	position: absolute;
-}
-
-.showcase {
-	background: #ededed;
-	padding: 4rem 0;
-}
-
-.showcase__title {
-	text-align: center;
-}
-
-.showcase__title h2 {
-	font-size: 1em;
-	font-family:'Moderat', sans-serif;
-	padding: 1em;
-}
-
-.showcase__grid {
-	width: 80%;
-	margin: 0 auto;
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
-	grid-auto-rows: minmax(50px, auto);
-	grid-gap: 20px;
-}
-
-.showcase__grid article {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.showcase__grid img {
-	max-width: 100%;
-	object-fit: contain;
-}
-
-@media (max-width: 600px) {
-	p {
-		font-size: 22px;
-	}
-
-	.shots--shot {
-		width: 100%;
-	}
-
-	.slide {
-		padding: 2em;
-	}
+@font-face {
+    font-family: 'Mars';
+    src: url(1.woff);
+    font-weight:400;
 }
