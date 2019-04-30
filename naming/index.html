@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                color: #fff;
+                font-family: sans-serif;
+            }
+
+            .slides {
+                scroll-snap-type: y mandatory;
+                height: 100vh;
+                overflow: scroll;
+            }
+
+            .slide {
+                height: 100vh;
+                width: 100vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                scroll-snap-align: center;
+            }
+
+            .slide:nth-child(even) { background: #2FBAFF; }
+            .slide:nth-child(odd) { background: #2F8CFF; }
+
+            .slide h2 {
+                font-size: 10vh;
+                position: relative;
+            }
+
+            .slide small {
+                font-size: 1.5rem;
+                position: absolute;
+                top: 1rem;
+                right: 0;
+                transform: translateX(100%);
+            }
+        </style>
+    </head>
+    <body>
+        <section class="slides"></section>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script>
+            var words = ["Awua", "Abua", "Odos", "Vlue", "Axura", "Aquarder", "Aquanter", "Aquabble", "Cleandrip", "Clearial", "Ultrazul", "Fresdrip", "Fresdrop", "Pyure", "Bluedrip", "Dripli", "Freshpop", "Watpop", "Ozmos", "Osmox", "Osmoly", "Azulia"]
+
+            $.each(words , function( index, value ) {
+                $('.slides').append('<article class="slide"> <h2>' + value + ' <small>®</small></h2> </article>');
+            });
+        </script>
+    </body>
+</html>
